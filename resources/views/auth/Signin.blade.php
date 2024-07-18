@@ -21,7 +21,12 @@
                 <div>{{ $message }}</div>
             @enderror
             <label>Password</label>
-            <input type="password" name="password" id="password">
+            <div class="password-container">
+                <input type="password" name="password" id="password">
+                <span class="eye-icon" onclick="togglePassword('password', this)">
+                    <i class="bi bi-eye-slash"></i>
+                </span>
+            </div>
             @error('password')
                 <div>{{ $message }}</div>
             @enderror
@@ -39,5 +44,21 @@
         <p class="p2">Don't have an account? <a href="{{ route('signup.create') }}">Sign Up</a></p>
     </div>
 </div>
+
+<script>
+    function togglePassword(id, element) {
+        var input = document.getElementById(id);
+        var icon = element.querySelector('i');
+        if (input.type === "password") {
+            input.type = "text";
+            icon.classList.remove('bi-eye-slash');
+            icon.classList.add('bi-eye');
+        } else {
+            input.type = "password";
+            icon.classList.remove('bi-eye');
+            icon.classList.add('bi-eye-slash');
+        }
+    }
+</script>
 
 @endsection

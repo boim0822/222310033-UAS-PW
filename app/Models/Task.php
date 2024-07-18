@@ -10,12 +10,20 @@ class Task extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title', 'list', 'reminder_date', 'category_id'];
-
-    protected $dates = ['reminder_date'];
+    protected $fillable = ['title', 'user_id'];
 
     public function category()
     {
         return $this->belongsTo(Category::class);
+    }
+
+    public function lists()
+    {
+        return $this->hasMany(TaskList::class);
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
     }
 }

@@ -1,0 +1,143 @@
+.main-content {
+    padding: 20px;
+}
+
+.header {
+    position: fixed;
+    width: 60%;
+    margin: 0 100px;
+}
+
+.header .bi-search {
+    position: absolute;
+    right: 33%;
+    top: 65%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #888;
+}
+
+.header input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    width: 500px;
+    height: 40px;
+    margin-left: 150px;
+    margin-top: 20px;
+}
+
+.tasks {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    justify-content: flex-start;
+    margin-top: 100px;
+    padding-bottom: 20px;
+}
+
+.task-card {
+    background-color: #90B8F8;
+    border-radius: 15px;
+    padding: 20px;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    white-space: nowrap;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.task-card.no-lists {
+    height: 150px;
+}
+
+.task-card.has-lists {
+    min-height: 100px;
+    height: auto;
+}
+
+.task-list-link{
+    text-decoration: none;
+}
+
+.task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    color: #26282B;
+
+}
+
+
+.task-header h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.category-label {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.task-items-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.task-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    background-color: #f8f9fa;
+    border-radius: 20px;
+    padding: 10px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.task-item input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.add-list {
+    cursor: pointer;
+    color: #26282B;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.add-list-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.add-list i {
+    margin-right: 5px;
+}
+
+.edit-list-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.edit-list-link .task-item {
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.edit-list-link .task-item:hover {
+    background-color: #e2e6ea;
+}

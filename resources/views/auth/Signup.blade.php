@@ -3,6 +3,7 @@
 @section('main-content')
 
 <link rel="stylesheet" href="{{ asset('assets/media/css/Signup.css') }}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css">
 
 <div class="container">
     <div class="left">
@@ -27,12 +28,22 @@
                 <div>{{ $message }}</div>
             @enderror
             <label>Password</label>
-            <input type="password" name="password" id="password">
+            <div class="password-container">
+                <input type="password" name="password" id="password">
+                <span class="eye-icon" onclick="togglePassword('password', this)">
+                    <i class="bi bi-eye-slash"></i>
+                </span>
+            </div>
             @error('password')
                 <div>{{ $message }}</div>
             @enderror
             <label>Confirm Password</label>
-            <input type="password" name="password_confirmation" id="password_confirmation">
+            <div class="password-container">
+                <input type="password" name="password_confirmation" id="password_confirmation">
+                <span class="eye-icon" onclick="togglePassword('password_confirmation', this)">
+                    <i class="bi bi-eye-slash"></i>
+                </span>
+            </div>
             @error('password_confirmation')
                 <div>{{ $message }}</div>
             @enderror
@@ -47,9 +58,24 @@
             <a href="#"><img src="{{ asset('assets/media/icon/google.png') }}" alt="Google"></a>
             <a href="#"><img src="{{ asset('assets/media/icon/apple.png') }}" alt="Apple"></a>
         </div>
-        <p class="p2">Already an account? <a href="{{ route('signin.create') }}">Sign In</a></p>
+        <p class="p2">Already an account? <a  href="{{ route('signin.create') }}">Sign In</a></p>
     </div>
 </div>
 
-@endsection
+<script>
+    function togglePassword(id, element) {
+        var input = document.getElementById(id);
+        var icon = element.querySelector('i');
+        if (input.type === "password") {
+            input.type = "text";
+            icon.classList.remove('bi-eye-slash');
+            icon.classList.add('bi-eye');
+        } else {
+            input.type = "password";
+            icon.classList.remove('bi-eye');
+            icon.classList.add('bi-eye-slash');
+        }
+    }
+</script>
 
+@endsection

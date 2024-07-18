@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f8f4e1;
+    background-color: #FAFAFA;
 }
 
 .container {
@@ -16,34 +16,22 @@ body {
 
 .left h1 {
     font-size: 60px;
-    color: #543310;
+    color: #5F85DB;
     font-weight: bold;
 }
 .highlighted-text {
-    color: #74512D;
+    color: #90B8F8;
 }
 
-.icon-container {
-    background-color: #543310;
-    border-radius: 50%;
-    padding: 40px;
-    width: 391px;
-    height: 350px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    margin-left: 50px;
-}
 .icon img {
-    width: 350px;
-    height: 350px;
+    width: 400px;
+    height: 400px;
 }
 
 .right {
     width: 740px;
     height: 530px;
-    background-color: #AF8F6F;
+    background-color: #90B8F8;
     padding: 20px;
     border-radius: 30px;
 }
@@ -63,14 +51,14 @@ form input {
     margin-bottom: 10px;
     padding: 5px;
     border-radius: 30px;
-    border: 1px solid #E5DACE;
-    background-color: #E5DACE;
+    border: 1px solid #737E88;
+    background-color: #EEEDEB;
 }
 
 form button {
     padding: 5px;
-    background-color: #543310;
-    color: #F8F4E1;
+    background-color: #5F85DB;
+    color: #F5F7F8;
     border: none;
     border-radius: 30px;
     cursor: pointer;
@@ -86,11 +74,11 @@ form button {
 
 form label {
     margin-bottom: 5px;
-    color: #74512D;
+    color: #F5F7F8;
 }
 
 form label a {
-    color: #543310;
+    color: #212121 !important;
     text-decoration: none;
 }
 
@@ -115,6 +103,23 @@ form label a {
 
 .p2{
     margin-left: 235px;
-    color: #74512D;
+    color: #FAFAFA;
 }
 
+.p2 a{
+    color: #212121 !important;
+}
+
+.password-container {
+    position: relative;
+}
+.password-container input {
+    padding-right: 500px;
+}
+.eye-icon {
+    position: absolute;
+    right: 10px;
+    top: 40%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}

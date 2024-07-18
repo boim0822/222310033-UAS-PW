@@ -1,68 +1,94 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #F8F4E1;
-    color: #543310;
-    margin: 0;
-    padding: 0;
-}
-
 .main-content {
     padding: 20px;
 }
+
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    position: fixed;
+    width: 60%;
+    margin: 0 100px;
 }
-h1 {
-    font-size: 35px;
-    font-weight: bold;
+
+.header .bi-search {
+    position: absolute;
+    right: 33%;
+    top: 65%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #888;
 }
+
 .header input {
     padding: 10px;
+    border: 1px solid #ccc;
     border-radius: 30px;
-    border: none;
-    width: 600px;
-    background-color: #E5DACE;
-    margin-right: 300px;
+    width: 500px;
+    height: 40px;
+    margin-left: 150px;
+    margin-top: 20px;
 }
+
 .tasks {
-    margin-top: 50px;
+    margin-top: 80px;
 }
-h2 {
-    font-size: 30px;
-    font-weight: bold;
-}
-.task-list {
-    background-color: #AF8F6F;
-    border-radius: 10px;
-    padding: 20px;
+
+.tasks h2 {
+    font-size: 24px;
     margin-bottom: 20px;
 }
+
+.task-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 85%;
+}
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #90B8F8;
+}
+
 .task-list h3 {
     margin: 0;
-    font-size: 20px;
-    color: #E5DACE;
+    font-size: 18px;
 }
-.task-list h4 {
-    margin: 0;
-    font-size: 15px;
-    color: #E5DACE;
-}
-.task {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+.task-date {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
     margin-top: 10px;
-    padding: 10px 0;
-    border-bottom: 1px solid #E5DACE;
+    align-self: flex-start;
+    transition: background-color 0.3s;
 }
-.task:last-child {
-    border-bottom: none;
+
+.task-today {
+    background-color: #C40C0C;
+    color: white;
+    width: 150px;
 }
-.task input[type="checkbox"] {
-    margin-right: 10px;
+
+.checkbox-checked {
+    background-color: #28A745;
+    color: white;
+    width: 150px;
 }
-.task .task-date {
-    color: #E5DACE;
+
+.edit-list-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.task-list {
+    cursor: pointer;
+}
+
+.task-list:hover {
+    background-color: #FAFAFA;
 }

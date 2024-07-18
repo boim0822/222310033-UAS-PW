@@ -8,42 +8,39 @@
     max-width: 50%;
 }
 h1 {
-    font-size: 55px;
+    font-size: 60px;
     font-weight: bold;
+    color: #5F85DB;
 }
 .highlighted-text {
-    color: #74512D;
+    color: #90B8F8;
     display: block;
 }
 .paraf{
     font-size: 20px;
     line-height: 1.5;
     text-align: justify;
+    max-width: 500px;
+    margin-bottom: auto;
+    color: #90B8F8;
 }
-.icon-container {
-    background-color: #543310;
-    border-radius: 50%;
-    padding: 40px;
-    width: 441px;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 .icon img {
     width: 400px;
     height: 400px;
 }
 .btn {
-    background-color: #af8f6f;
+    background-color: #5F85DB;
     border: none;
-    padding: 10px 50px;
     border-radius: 30px;
     font-size: 16px;
     font-weight: bold;
-    color: #f8f4e1;
-    margin-left: 60%;
+    color: #FAFAFA;
+    margin-left: 65%;
+    width: 200px;
+    height: 40px;
 }
 .btn:hover {
-    background-color: #f8f4e1;
+    background-color: #FAFAFA !important;
+    color: #1D242B !important;
 }

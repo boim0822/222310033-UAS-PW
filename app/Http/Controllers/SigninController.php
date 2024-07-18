@@ -14,15 +14,20 @@ class SigninController extends Controller
 
     public function store(Request $request)
     {
-        $credentials = $request->only('email', 'password');
 
-        if (Auth::attempt($credentials)) {
-            return redirect()->route('home');
+        $credentials = $request->validate([
+            "email" => "required|email:dns",
+            "password" => "required"
+        ]);
+
+        if(Auth::attempt($credentials)) {
+            $request->session()->regenerate();
+
+            return redirect()->intended('/home');
         }
 
-        return redirect()->back()->withErrors([
-            'email' => 'The provided credentials do not match our records.',
-        ])->withInput();
+        return back()->with('loginError', 'Email atau Password tidak sesuai!');
+
     }
 }
 
